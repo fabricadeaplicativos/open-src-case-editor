@@ -45,8 +45,6 @@ define(function (require, exports, module) {
 
 		// attach the case to be edited to the dock
 		caseDock.attach(options['case']);
-
-
 	};
 
 });

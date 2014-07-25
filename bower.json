@@ -10,7 +10,8 @@
     "archetypo": "~0.18.12",
     "bb-dock": "~0.7.11",
     "jquery": "~2.1.1",
-    "bb-collection-view": "~0.5.9"
+    "bb-collection-view": "~0.5.9",
+    "velocity": "~0.9.0"
   },
   "devDependencies": {
     "requirejs": "*",

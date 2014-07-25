@@ -34,7 +34,8 @@ require.config({
 		scope: '../bower_components/scope/built/scope',
 		'bb-dock': '../bower_components/bb-dock/built/bb-dock',
 		dock: '../bower_components/dock/built/dock',
-		'bb-collection-view': '../bower_components/bb-collection-view/built/bb-collection-view'
+		'bb-collection-view': '../bower_components/bb-collection-view/built/bb-collection-view',
+		velocity: '../bower_components/velocity/jquery.velocity'
 	},
 	shim: {
 		backbone: {

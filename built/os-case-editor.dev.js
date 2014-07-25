@@ -2315,7 +2315,7 @@ define('text',['module'], function (module) {
 });
 
 
-define('text!os-case-editor/html/index.html',[],function () { return '<div class="container">\n\n\t<div class="row">\n\n\t\t<!-- the case data view -->\n\t\t<div\n\t\t\tclass="col-md-3 case-data"\n\n\t\t\tdata-os\n\t\t\tdata-os-model="!load: os-case-editor/docks/case"\n\t\t\tdata-os-view =" bbmv: $this"\n\t\t>\n\t\t\t<input data-bind-name="value" placeholder="Case name">\n\t\t\t<input data-bind-author="value" placeholder="Author">\n\n\t\t\t<textarea data-bind-description="value"></textarea>\n\n\t\t\t<button data-bind-on-click="save">Save</button>\n\t\t</div>\n\n\t\t<!-- collection of case tech stacks -->\n\t\t<div class="col-md-6 case-stacks">\n\t\t\t<h1>Technology stacks used: </h1>\n\t\t</div>\n\n\t</div>\n\n</div>\n';});
+define('text!os-case-editor/html/index.html',[],function () { return '<div class="container">\n\n\t<div class="row">\n\n\t\t<!-- the case data view -->\n\t\t<div\n\t\t\tclass="col-md-3 case-data"\n\n\t\t\tdata-os\n\t\t\tdata-os-model="!load: os-case-editor/docks/case"\n\t\t\tdata-os-view =" os-case-editor/views/case: $this"\n\t\t>\n\t\t\t<div>\n\t\t\t\t<input data-bind-name="value" placeholder="Case name">\n\t\t\t\t<input data-bind-author="value" placeholder="Author">\n\n\t\t\t\t<textarea data-bind-description="value"></textarea>\n\n\t\t\t\t<button data-bind-on-click="save">Save</button>\n\t\t\t</div>\n\n\t\t\t<!-- tags -->\n\t\t\t<div id="tags">\n\t\t\t\t<div data-bind-tags="tags | html" class="listing"></div>\n\t\t\t\t<!-- tag box -->\n\t\t\t\t<div\n\t\t\t\t\tid="tag-box"\n\n\t\t\t\t\tdata-os\n\t\t\t\t\tdata-os-case-model="!load: os-case-editor/docks/case"\n\t\t\t\t\tdata-os-view      =" os-case-editor/views/tag-box: $this"\n\t\t\t\t>\n\t\t\t\t\t<h4>Add a tag</h4>\n\t\t\t\t\t<input data-tag-bind-name="value">\n\t\t\t\t\t<button data-tag-bind-on-click="addTag">ADD TAG</button>\n\t\t\t\t</div>\n\t\t\t\t<!-- tag box -->\n\t\t\t</div>\n\t\t</div>\n\n\t\t<!-- collection of case tech stacks -->\n\t\t<div class="col-md-6 case-stacks">\n\t\t\t<h1>Technology stacks used: </h1>\n\n\n\t\t\t<div id="add-lib"></div>\n\t\t</div>\n\n\n\t</div>\n\n</div>\n';});
 
 //     dock
 //     (c) simonfan
@@ -2347,15 +2347,12 @@ define('os-case-editor/docks/case',['require','exports','module','bb-dock'],func
  * @module OsCaseEditor
  */
 
-define('os-case-editor',['require','exports','module','jquery','archetypo','bbmv','text!os-case-editor/html/index.html','os-case-editor/docks/case'],function (require, exports, module) {
+define('os-case-editor',['require','exports','module','jquery','archetypo','text!os-case-editor/html/index.html','os-case-editor/docks/case'],function (require, exports, module) {
 	
 
 	// load external modules
 	var $         = require('jquery'),
-		archetypo = require('archetypo'),
-
-		// remove later
-		bbmv  = require('bbmv');
+		archetypo = require('archetypo');
 
 	// load main html for the component
 	var mainHtml = require('text!os-case-editor/html/index.html');
@@ -2387,8 +2384,6 @@ define('os-case-editor',['require','exports','module','jquery','archetypo','bbmv
 
 		// attach the case to be edited to the dock
 		caseDock.attach(options['case']);
-
-
 	};
 
 });

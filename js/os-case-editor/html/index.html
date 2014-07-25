@@ -8,20 +8,44 @@
 
 			data-os
 			data-os-model="!load: os-case-editor/docks/case"
-			data-os-view =" bbmv: $this"
+			data-os-view =" os-case-editor/views/case: $this"
 		>
-			<input data-bind-name="value" placeholder="Case name">
-			<input data-bind-author="value" placeholder="Author">
+			<div>
+				<input data-bind-name="value" placeholder="Case name">
+				<input data-bind-author="value" placeholder="Author">
 
-			<textarea data-bind-description="value"></textarea>
+				<textarea data-bind-description="value"></textarea>
 
-			<button data-bind-on-click="save">Save</button>
+				<button data-bind-on-click="save">Save</button>
+			</div>
+
+			<!-- tags -->
+			<div id="tags">
+				<div data-bind-tags="tags | html" class="listing"></div>
+				<!-- tag box -->
+				<div
+					id="tag-box"
+
+					data-os
+					data-os-case-model="!load: os-case-editor/docks/case"
+					data-os-view      =" os-case-editor/views/tag-box: $this"
+				>
+					<h4>Add a tag</h4>
+					<input data-tag-bind-name="value">
+					<button data-tag-bind-on-click="addTag">ADD TAG</button>
+				</div>
+				<!-- tag box -->
+			</div>
 		</div>
 
 		<!-- collection of case tech stacks -->
 		<div class="col-md-6 case-stacks">
 			<h1>Technology stacks used: </h1>
+
+
+			<div id="add-lib"></div>
 		</div>
+
 
 	</div>
 

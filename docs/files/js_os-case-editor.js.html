@@ -101,10 +101,7 @@ define(function (require, exports, module) {
 
 	// load external modules
 	var $         = require(&#x27;jquery&#x27;),
-		archetypo = require(&#x27;archetypo&#x27;),
-
-		// remove later
-		bbmv  = require(&#x27;bbmv&#x27;);
+		archetypo = require(&#x27;archetypo&#x27;);
 
 	// load main html for the component
 	var mainHtml = require(&#x27;text!os-case-editor/html/index.html&#x27;);
@@ -136,8 +133,6 @@ define(function (require, exports, module) {
 
 		// attach the case to be edited to the dock
 		caseDock.attach(options[&#x27;case&#x27;]);
-
-
 	};
 
 });
