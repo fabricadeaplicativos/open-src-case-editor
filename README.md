@@ -1,0 +1,3 @@
+# os-case-editor[![Build Status](https://secure.travis-ci.org//os-case-editor.png?branch=master)](http://travis-ci.org//os-case-editor)
+
+Some module...

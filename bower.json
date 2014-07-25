@@ -1,0 +1,26 @@
+{
+  "name": "os-case-editor",
+  "main": "built/os-case-editor.js",
+  "version": "0.0.0",
+  "description": "Some module...",
+  "dependencies": {
+    "bbmv": "~0.11.11",
+    "improved-model": "~0.4.7",
+    "bootstrap": "~3.2.0",
+    "archetypo": "~0.18.12",
+    "bb-dock": "~0.7.11",
+    "jquery": "~2.1.1",
+    "bb-collection-view": "~0.5.9"
+  },
+  "devDependencies": {
+    "requirejs": "*",
+    "requirejs-text": "*",
+    "underscore": "*",
+    "jquery": "*",
+    "qunit": "*"
+  },
+  "resolutions": {
+    "pipe": "0.10.9",
+    "subject": "0.5.9"
+  }
+}

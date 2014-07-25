@@ -1,0 +1,28 @@
+<div class="container">
+
+	<div class="row">
+
+		<!-- the case data view -->
+		<div
+			class="col-md-3 case-data"
+
+			data-os
+			data-os-model="!load: os-case-editor/docks/case"
+			data-os-view =" bbmv: $this"
+		>
+			<input data-bind-name="value" placeholder="Case name">
+			<input data-bind-author="value" placeholder="Author">
+
+			<textarea data-bind-description="value"></textarea>
+
+			<button data-bind-on-click="save">Save</button>
+		</div>
+
+		<!-- collection of case tech stacks -->
+		<div class="col-md-6 case-stacks">
+			<h1>Technology stacks used: </h1>
+		</div>
+
+	</div>
+
+</div>

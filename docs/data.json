@@ -1,0 +1,33 @@
+{
+    "project": {
+        "name": "os-case-editor",
+        "version": "0.0.0"
+    },
+    "files": {
+        "js/os-case-editor.js": {
+            "name": "js/os-case-editor.js",
+            "modules": {
+                "OsCaseEditor": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "OsCaseEditor": {
+            "name": "OsCaseEditor",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "js/os-case-editor.js",
+            "line": 5,
+            "description": "AMD module."
+        }
+    },
+    "classes": {},
+    "classitems": [],
+    "warnings": []
+}
